@@ -4,6 +4,7 @@
 #include <QtQuick/QQuickPaintedItem>
 #include <QtQuick/5.12.3/QtQuick/private/qquickrectangle_p.h>
 #include <QtQuick/5.12.3/QtQuick/private/qquickmousearea_p.h>
+#include <QtQuick/5.12.3/QtQuick/private/qquickevents_p_p.h>
 #include <QColor>
 #include <QQmlComponent>
 #include <QQmlEngine>
@@ -12,10 +13,9 @@ class PopupShell : public QQuickRectangle
 {
     Q_OBJECT
 public:
-    PopupShell() : mouseArea(new QQuickMouseArea(this))
-    {
-
-    }
+    PopupShell();
+public slots:
+    void onClick();
 private:
     QQuickMouseArea* mouseArea;
 };

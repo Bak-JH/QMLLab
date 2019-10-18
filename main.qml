@@ -12,13 +12,16 @@ Window {
     title: qsTr("Hello World")
 
     PopupShell{
-        TestPopup{
-            id:testPopup
-            width: 50
-            height:50
-            color: "#FFF000"
-
-        }
+        id:testPopup
+        width: 50
+        height:50
+        color: "#FFF000"
+//        MouseArea {
+//                        anchors.fill: parent
+//                        onClicked: {
+//                            console.log("clicked")
+//                        }
+//                    }
     }
 }
 
